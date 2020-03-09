@@ -153,7 +153,7 @@ body::-webkit-scrollbar-thumb{
 @media only screen and (max-width:768px){
     main{
         margin:0;
-        padding: .5rem 1rem 1rem 1rems;
+        padding: .5rem 1rem 5.5rem 1rems;
     }
 
     .navbar{

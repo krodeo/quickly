@@ -69,6 +69,12 @@ body::-webkit-scrollbar-thumb{
     color: white;
     filter: grayscale(100%) opacity(.5);
     transition: 600ms;
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none;
 }
 
 .navbar .link-icon{

@@ -1,0 +1,11 @@
+.do-rotation{
+    .rotate-this{
+        transition: 600ms ease;
+    }
+
+    &:hover{
+        .rotate-this{
+            transform: rotate(360deg);
+        }
+    }
+}

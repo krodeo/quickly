@@ -1,0 +1,104 @@
+// Default
+body{
+    color:color('dark'); // main text color
+    background-color: white; // main BG color
+
+    &::-webkit-scrollbar-track{
+        background-color: color('lightgray');
+    }
+    
+    &::-webkit-scrollbar-thumb{
+        background-color: color('dark');
+    }
+    
+    .navbar{
+        background-color: color('dark');
+        &:hover{
+            box-shadow: 1px 0 30px rgba(0,0,0,.3);
+        }
+        .nav-item{
+            &:hover{
+                background-color: black;
+            }
+    
+            .nav-link{
+                .link-text{
+                    color:white;
+                }
+                .link-icon{
+                    color:color('orange');
+                }
+            }
+        }
+
+        .nav-logo{
+            background-color: black;
+        }
+    }
+}
+
+// DARK THEME
+body.quickly-dark{
+    color:color('white'); // main text color
+    background-color: #1a1a1a; // main BG color
+
+    &::-webkit-scrollbar-track{
+        background-color: black;
+    }
+    
+    &::-webkit-scrollbar-thumb{
+        background-color: color('darkgray');
+    }
+    
+    .navbar{
+        background-color: #242424;
+    
+        .nav-item{
+            &:hover{
+                background-color: color('dark');
+            }
+    
+            .nav-link{
+                .link-text{
+                    color:white;
+                }
+                .link-icon{
+                    color:color('orange');
+                }
+            }
+        }
+
+        .nav-logo{
+            background-color: color('dark');
+        }
+    }
+}
+
+// LIGHT THEME
+body.quickly-light{
+    color:color('dark'); // main text color
+    background-color: white; // main BG color
+    
+    .navbar{
+        background-color: color('white');
+    
+        .nav-item{
+            &:hover{
+                background-color: color('lightgray');
+            }
+    
+            .nav-link{
+                .link-text{
+                    color:black;
+                }
+                .link-icon{
+                    color:color('orange');
+                }
+            }
+        }
+
+        .nav-logo{
+            background-color: color('lightgray');
+        }
+    }
+}

@@ -98,6 +98,7 @@ ul.footer{
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 ul.footer li{
@@ -213,5 +214,6 @@ ul.footer li a{
 
     ul.footer li.sm-12{
         width: 100%;
+        margin-top: 1rem;
     }
 }

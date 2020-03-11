@@ -70,7 +70,7 @@ $transition-speed:300ms;
         .nav-item {
             width: 100%;
             
-            &:not(.nav-logo):hover{
+            &:not(.nav-logo):hover, &.active{
                 .nav-link{
                     filter: grayscale(0) opacity(1);
                     
@@ -122,6 +122,17 @@ $transition-speed:300ms;
                         max-width: calc(#{$icon-size}/1.3);
                         font-size: calc(#{$icon-size}/1.3);
                     }
+                }
+
+                .link-badge{
+                    position: absolute;
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    font-size: .8rem;
+                    border-radius: 50%;
+                    left: $icon-size + .5rem;
+                    top: 1rem;
+                    text-align: center;
                 }
             }
         }

@@ -13,6 +13,7 @@ body{
     
     .navbar{
         background-color: color('dark');
+        &:hover .nav-item.active{background-color: black;}
         .nav-item{
             &:hover{
                 background-color: black;
@@ -24,6 +25,10 @@ body{
                 }
                 .link-icon{
                     color:color('orange');
+                }
+                .link-badge{
+                    color: white;
+                    background-color: color('orange');
                 }
             }
         }
@@ -37,6 +42,32 @@ body{
     .bg-secondary{background-color:color('lightgray');}
     .bg-theme{background-color:color('orange')}
     .cl-theme{color:color('orange')}
+}
+
+// LIGHT THEME
+body.quickly-light{
+    .navbar{
+        background-color: color('white');
+        &:hover .nav-item.active{background-color: color('lightgray');}
+        .nav-item{
+            &:hover{
+                background-color: color('lightgray');
+            }
+    
+            .nav-link{
+                .link-text{
+                    color:black;
+                }
+                .link-icon{
+                    color:color('orange');
+                }
+            }
+        }
+
+        .nav-logo{
+            background-color: color('lightgray');
+        }
+    }
 }
 
 // DARK THEME
@@ -54,7 +85,7 @@ body.quickly-dark{
     
     .navbar{
         background-color: #242424;
-    
+        &:hover .nav-item.active{background-color: color('dark');}
         .nav-item{
             &:hover{
                 background-color: color('dark');
@@ -79,33 +110,4 @@ body.quickly-dark{
     .bg-secondary{background-color:color('dark');}
     .bg-theme{background-color:color('orange')}
     .cl-theme{color:color('orange')}
-}
-
-// LIGHT THEME
-body.quickly-light{
-    color:color('dark'); // main text color
-    background-color: white; // main BG color
-    
-    .navbar{
-        background-color: color('white');
-    
-        .nav-item{
-            &:hover{
-                background-color: color('lightgray');
-            }
-    
-            .nav-link{
-                .link-text{
-                    color:black;
-                }
-                .link-icon{
-                    color:color('orange');
-                }
-            }
-        }
-
-        .nav-logo{
-            background-color: color('lightgray');
-        }
-    }
 }

@@ -20,8 +20,8 @@ section .section-body > p{
     font-size: calc(1rem + 2px);
 }
 
-section:last-child .section-body > p{
-    width: 50%;
+section:first-child .section-body > p{
+    width: 60%;
 }
 
 section:nth-child(3) .section-body > p{

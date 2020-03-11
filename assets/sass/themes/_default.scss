@@ -1,0 +1,113 @@
+// Default
+body{
+    color:color('dark'); // main text color
+    background-color: white; // main BG color
+
+    &::-webkit-scrollbar-track{
+        background-color: color('lightgray');
+    }
+    
+    &::-webkit-scrollbar-thumb{
+        background-color: color('dark');
+    }
+    
+    .navbar{
+        background-color: color('dark');
+        &:hover .nav-item.active{background-color: black;}
+        .nav-item{
+            &:hover{
+                background-color: black;
+            }
+    
+            .nav-link{
+                .link-text{
+                    color:white;
+                }
+                .link-icon{
+                    color:color('orange');
+                }
+                .link-badge{
+                    color: white;
+                    background-color: color('orange');
+                }
+            }
+        }
+
+        .nav-logo{
+            background-color: black;
+        }
+    }
+
+    .bg-primary{background-color:color('white');}
+    .bg-secondary{background-color:color('lightgray');}
+    .bg-theme{background-color:color('orange')}
+    .cl-theme{color:color('orange')}
+}
+
+// LIGHT THEME
+body.quickly-light{
+    .navbar{
+        background-color: color('white');
+        &:hover .nav-item.active{background-color: color('lightgray');}
+        .nav-item{
+            &:hover{
+                background-color: color('lightgray');
+            }
+    
+            .nav-link{
+                .link-text{
+                    color:black;
+                }
+                .link-icon{
+                    color:color('orange');
+                }
+            }
+        }
+
+        .nav-logo{
+            background-color: color('lightgray');
+        }
+    }
+}
+
+// DARK THEME
+body.quickly-dark{
+    color:color('white'); // main text color
+    background-color: #131313; // main BG color
+
+    &::-webkit-scrollbar-track{
+        background-color: black;
+    }
+    
+    &::-webkit-scrollbar-thumb{
+        background-color: color('darkgray');
+    }
+    
+    .navbar{
+        background-color: #242424;
+        &:hover .nav-item.active{background-color: color('dark');}
+        .nav-item{
+            &:hover{
+                background-color: color('dark');
+            }
+    
+            .nav-link{
+                .link-text{
+                    color:white;
+                }
+                .link-icon{
+                    color:color('orange');
+                }
+            }
+        }
+
+        .nav-logo{
+            background-color: color('dark');
+        }
+    }
+
+    .bg-primary{background-color:#131313;}
+    .bg-secondary{background-color:color('dark');}
+    .bg-theme{background-color:color('orange')}
+    .cl-theme{color:color('orange')}
+}

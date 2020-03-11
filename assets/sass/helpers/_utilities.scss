@@ -1,6 +1,6 @@
 .do-rotation{
     .rotate-this{
-        transition: 600ms ease;
+        transition: transform 600ms ease;
     }
 
     &:hover{
@@ -8,4 +8,14 @@
             transform: rotate(360deg);
         }
     }
+}
+
+// Flex Center
+
+.v-row-center, .h-col-center{
+    align-items: center;
+}
+
+.h-row-center, .v-col-center{
+    justify-content: center;
 }

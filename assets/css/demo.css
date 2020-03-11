@@ -2,31 +2,30 @@ section{
     width: 100%;
     max-height: 100vh;
     display: flex;
-    padding: 0 6rem;
+    padding: 4rem 6rem;
     overflow: hidden;
     height: 100vh;
 }
 
-section.section-densed{
-    height: 65vh;
+section.section-auto{
+    height: auto;
 }
 
-section:nth-child(even){
-    background-color: #f8f8f8;
+section:last-child{
+    padding: 2rem 6rem;
 }
-
-section.v-center{
-    align-items: center;
-}
-
-section.h-center{
-    justify-content: center;
-}
-
 section .section-body > p{
-    width: 50%;
     margin-bottom: 3rem;
     line-height: 1.7rem;
+    font-size: calc(1rem + 2px);
+}
+
+section:last-child .section-body > p{
+    width: 50%;
+}
+
+section:nth-child(3) .section-body > p{
+    width: 70%;
 }
 
 section .section-body > h1{
@@ -37,6 +36,7 @@ section .section-body > h1{
 
 .btn{
     display: inline-flex;
+    justify-content: center;
     align-items: center;
     padding: 1.5rem 2rem;
     background-color: #0e0e0e;
@@ -59,6 +59,7 @@ h3{font-size: 2rem;}
 h4{font-size: 1.5rem;}
 h5{font-size: 1rem;}
 h6{font-size: .9rem;}
+a{color: blue;text-decoration: none;}
 
 ul.box{
     list-style: none;
@@ -71,8 +72,6 @@ ul.box li{
     background-color: #0e0e0e;
     padding: 3rem;
     margin:1rem;
-    max-width: 300px;
-    max-height: 300px;
     color: white;
 }
 
@@ -88,11 +87,28 @@ ul.box li h4{
     display: block;
     margin-top: 1rem!important;
     margin-bottom: .5rem;
-    color: tomato;
 }
 
 ul.box p{
     font-size: .9rem;
+}
+
+ul.footer{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul.footer li{
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+
+ul.footer li a{
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
 }
 
 .quickly-dark .btn{
@@ -107,41 +123,43 @@ ul.box p{
     background-color: #ff4828;
 }
 
-.quickly-dark section:nth-child(even){
-    background-color: #2b2b2b;
+.mb-big{
+    margin-bottom: 3rem;
+}
+
+.latest-ver{
+    font-weight: normal;
+    margin-top: 1rem;
 }
 
 @media only screen and (max-width:768px){
     section{
-        width: 100%;
+        width: calc(100% + 2rem);
         align-items: center;
-        padding: 1rem;
-        height: auto;
-        padding-bottom: 2rem;
-    }
-    
-    section.section-densed{
-        height: auto;
+        padding: 3rem 1.5rem!important;
+        max-height: none;
+        margin: 0 -1rem;
+        overflow: unset;
     }
     
     section .section-body > p{
-        width: 100%;
+        width: 100%!important;
     }
-    
-    section .section-body > h1{
-        font-weight: 800;
+
+    section .section-body::after{
+        clear: both;
+    }
+
+    section:first-child{
+        height: 90vh;
+    }
+
+    section:last-child{
+        padding: 1.5rem!important;
     }
     
     .btn{
-        padding: 1rem 1.5rem;
-        background-color: #0e0e0e;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: 300ms;
-        font-weight: 300;
-        font-weight: bold;
-        
+        width: 100%;
     }
     
     .btn-sm-block{
@@ -160,50 +178,40 @@ ul.box p{
     h6{font-size: .7rem;}
     
     ul.box{
-        display: none;
-        flex-direction: column;
-        justify-content: center;
+        /* display: none; */
+        /* flex-direction: column; */
+        /* justify-content: center; */
+        flex-wrap: wrap;
+        width: 100%;
     }
     
     ul.box li{
-        padding: 3rem;
-        margin:.8rem 0;
-        max-width: 100%;
-        max-height: unset;
-    }
-    
-    ul.box li:first-child{
-        margin-left:0;
-    }
-    
-    ul.box li:last-child{
-        margin-right:0;
+        padding: 1.5rem;
+        margin:.5rem 0 ;
+        width: 50%;    
     }
     
     ul.box li h4{
         display: block;
         margin-top: 1rem!important;
         margin-bottom: .5rem;
-        color: tomato;
     }
     
     ul.box p{
         font-size: .9rem;
     }
-    
-    .quickly-dark .btn{
-        background-color: tomato;
+
+    .mb-big{
+        margin-bottom: 1.5rem;
     }
-    
-    .quickly-dark .btn{
-        color: #1a1a1a;
+
+    .latest-ver{
+        text-align: center;
     }
-    
-    .quickly-dark .btn:hover{
-        background-color: #ff4828;
-    }
-    
-    .quickly-dark section:nth-child(even){
-        background-color: #2b2b2b;
+
+    .d-sm-none{display: none!important;}
+
+    ul.footer li.sm-12{
+        width: 100%;
     }
 }

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/css/demo.css">
 </head>
 
-<body class="quickly-light">
+<body>
     <nav class="navbar">
         <ul class="navbar-nav">
             <li class="nav-logo nav-item">
@@ -51,59 +51,80 @@
                 </a>
             </li>
             <li class="nav-item nav-bottom">
-                <a href="#" id="btnTheme" class="nav-link">
+                <button id="btnTheme" class="nav-link">
                     <i class="link-icon fas fa-fw fa-paint-roller"></i>
                     <span class="link-text">Change Theme</span>
-                </a>
+                </button>
             </li>
         </ul>
     </nav>
     <main>
-        <section class="v-center">
+        <section class="v-row-center">
             <div class="section-body">
                 <h3>Hi there!</h3>
-                <h1 style="margin-bottom: 1rem;">Welcome to <span style="color: #ed553b;">Quickly</span></h1>
-                <p>Quickly adalah tema CSS yang ringan dan responsif. Sangat cocok digunakan untuk keperluan projek
+                <h1 style="margin-bottom: 1rem;">Welcome to <span class="cl-theme">Quickly</span></h1>
+                <p>Quickly adalah template dashboard CSS yang ringan dan responsif. Sangat cocok digunakan untuk keperluan projek
                     dengan skala kecil. Quickly memiliki beberapa tema bawaan yang dapat diubah sesuka hati tanpa perlu
                     konfigurasi javascript.</p>
-                <a href="#" class="btn do-rotation">
+                <a href="https://github.com/itsyaqin/quickly/archive/v0.1.zip" class="btn do-rotation">
                     <i class="fas fa-angle-double-down fa-2x rotate-this" style="margin-right: 1rem;"></i>Download Now,
                     Quickly!
                 </a>
-                <!-- <a href="#" class="btn do-rotation"><i class="fab fa-github fa-2x rotate-this"></i></a> -->
+                <h5 class="latest-ver">Latest release is v0.1</h5>
             </div>
         </section>
-        <section class="section-densed h-center">
+        <section class="section-auto bg-secondary v-row-center h-row-center">
             <div class="section-body" style="text-align: center;">
-                <h3 style="margin-bottom: 3rem;">Why So Quickly?</h3>
-                <ul class="box mt-big">
+                <h3 class="mb-big">Why So Quickly?</h3>
+                <ul class="box">
                     <li class="do-rotation">
                         <i class="rotate-this fas fa-feather-alt fa-3x"></i>
-                        <h4>Lightweight</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <h4 class="cl-theme">Lightweight</h4>
+                        <p>Dibuat menggunakan CSS murni tanpa framework.</p>
                     </li>
                     <li class="do-rotation">
                         <i class="rotate-this fab fa-js fa-3x"></i>
-                        <h4>No Javascript</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <h4 class="cl-theme">No Javascript</h4>
+                        <p>Tak perlu konfigurasi javascript lebih lanjut</p>
                     </li>
                     <li class="do-rotation">
                         <i class="rotate-this fas fa-mobile fa-3x"></i>
-                        <h4>Responsive</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <h4 class="cl-theme">Responsive</h4>
+                        <p>Ukuran sudah menyesuaikan dengan berbagai perangkat.</p>
                     </li>
                     <li class="do-rotation">
                         <i class="rotate-this fas fa-paint-roller fa-3x"></i>
-                        <h4>Custom Themes</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <h4 class="cl-theme">Custom Themes</h4>
+                        <p>Memiliki tema yang dapat diganti dengan mudah.</p>
                     </li>
                 </ul>
             </div>
         </section>
-        <section></section>
+        <section class="section-auto">
+            <div class="section-body">
+                <h3 style="margin-bottom: 1rem;">Future Plan</h3>
+                <p>Quickly masih dalam tahap pengembangan awal. Ada banyak sekali fitur yang ingin saya tambahkan di kemudian hari meliputi penulisan dokumentasi yang lengkap, kelas utility penunjang, kelas warna yang menyesuaikan tema, dukungan berbagai css framework, javscript API, dan berbagai tema baru lainnya, serta penyesuaian struktur agar template ini cocok digunakan sebagai dashboard maupun landing page.</p>
+                <h3 style="margin-bottom: 1rem;">Lisensi</h3>
+                <p>Sorce Code ini berada dalam naungan lisensi <a href="https://choosealicense.com/licenses/mit/">MIT</a> yang artinya anda bisa menggunakan/memodifikasi/mendistribusikan source code ini untuk kebutuhan pribadi maupun komersil dengan ketentuan lisensi ini tetap diikutsertakan.</p>
+                <h3 style="margin-bottom: 1rem;">Kolaborasi</h3>
+                <p>Saya sangat mengapresiasi apabila anda ingin berkolaborasi mengembangkan template ini lebih lanjut. Anda bisa melihat roadmap maupun list fitur yang sekedar dan akan dikerjakan pada bagian <a href="https://github.com/itsyaqin/quickly/projects">Projects</a>.</p>
+            </div>
+        </section>
+        <section class="section-auto bg-secondary v-row-center">
+            <div class="section-body">
+                <ul class="footer">
+                    <li><a class="cl-primary" href="https://github.com/itsyaqin">Github</a></li>
+                    <li><a class="cl-primary" href="https://facebook.com/itsyaqin">Facebook</a></li>
+                    <li style="margin-bottom: 1rem;"><a class="cl-primary" href="https://wa.me/6281937104580">WhatsApp</a></li>
+                    <li class="d-sm-none">|</li>
+                    <li class="sm-12">Code licensed <a href="https://choosealicense.com/licenses/mit/">MIT</a></li>
+                    <li class="sm-12">Yaqin, 2020</a></li>
+                </ul>
+            </div>
+        </section>
     </main>
     <script>
-        var index = 0;
+        var index = 1;
         var theme = ['quickly', 'quickly-dark', 'quickly-light'];
         var body = document.getElementsByTagName('body');
         document.getElementById('btnTheme').addEventListener('click', function (e) {

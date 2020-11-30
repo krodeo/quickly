@@ -68,10 +68,17 @@ $transition-speed:300ms;
             flex-direction: row;
         }
 
+        
         .nav-item {
             width: 100%;
             
-            &:not(.nav-logo):hover, &.active{
+            &.active{
+                .nav-link{
+                    filter: grayscale(0) opacity(1);
+                }
+            }
+
+            &:not(.nav-logo):hover{
                 .nav-link{
                     filter: grayscale(0) opacity(1);
                     
@@ -81,7 +88,7 @@ $transition-speed:300ms;
                     }
                 }
             }
-            
+
             &.nav-bottom{
                 margin-top: auto;
             }
